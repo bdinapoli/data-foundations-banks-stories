@@ -104,6 +104,9 @@
     background: var(--teal);
     color: var(--white);
     padding: 14px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
   .challenges-label {
@@ -418,48 +421,48 @@
 
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 
-    body { font-size: 9px; line-height: 1.32; }
+    body { font-size: 9.5px; line-height: 1.38; }
 
-    .header { padding: 10px 20px 8px; gap: 12px; }
-    .header-title { font-size: 15px; }
-    .header-sub { font-size: 9px; margin-top: 5px; line-height: 1.38; }
-    .qr-box { width: 60px; height: 60px; }
-    .qr-box svg, .qr-box img, .qr-box canvas { width: 52px !important; height: 52px !important; }
+    .header { padding: 13px 22px 11px; gap: 14px; }
+    .header-title { font-size: 16px; }
+    .header-sub { font-size: 9.5px; margin-top: 6px; line-height: 1.44; }
+    .qr-box { width: 64px; height: 64px; }
+    .qr-box svg, .qr-box img, .qr-box canvas { width: 56px !important; height: 56px !important; }
 
-    .challenges { padding: 6px 20px; }
-    .challenges-label { font-size: 8px; margin-bottom: 4px; }
-    .challenge-item strong { font-size: 9px; }
-    .challenge-item p { font-size: 8px; line-height: 1.3; }
+    .challenges { padding: 8px 22px; }
+    .challenges-label { font-size: 8.5px; margin-bottom: 5px; }
+    .challenge-item strong { font-size: 9.5px; }
+    .challenge-item p { font-size: 8.5px; line-height: 1.35; }
 
-    .df-banner { padding: 5px 20px; }
-    .df-banner-text { font-size: 9px; }
+    .df-banner { padding: 7px 22px; }
+    .df-banner-text { font-size: 9.5px; }
 
-    .main { padding: 8px 20px 8px; }
+    .main { padding: 10px 22px 10px; }
 
     /* Force 3-column grid when printing */
-    .stories-grid { gap: 7px; }
-    .story-row { display: grid !important; grid-template-columns: 1fr 1fr 1fr !important; gap: 7px; }
+    .stories-grid { gap: 9px; }
+    .story-row { display: grid !important; grid-template-columns: 1fr 1fr 1fr !important; gap: 9px; }
 
-    .story-card-body { padding: 7px 9px; }
-    .story-logo { height: 24px; margin-bottom: 4px; }
-    .story-logo img { max-height: 24px; max-width: 110px; }
-    .story-name { font-size: 9.5px; }
-    .story-detail { font-size: 8px; margin-bottom: 4px; }
-    .story-challenge { font-size: 8px; margin-bottom: 5px; line-height: 1.3; }
-    .story-metrics { gap: 5px; margin-bottom: 5px; }
-    .metric-value { font-size: 13px; }
-    .metric-label { font-size: 7.5px; max-width: 62px; }
-    .story-quote { font-size: 7.5px; padding: 4px 8px; line-height: 1.3; }
-    .story-quote cite { font-size: 7px; }
-    .df-badge { font-size: 7px; padding: 2px 5px; }
+    .story-card-body { padding: 9px 11px; }
+    .story-logo { height: 27px; margin-bottom: 5px; }
+    .story-logo img { max-height: 27px; max-width: 120px; }
+    .story-name { font-size: 10px; }
+    .story-detail { font-size: 8.5px; margin-bottom: 5px; }
+    .story-challenge { font-size: 8.5px; margin-bottom: 6px; line-height: 1.35; }
+    .story-metrics { gap: 6px; margin-bottom: 6px; }
+    .metric-value { font-size: 14px; }
+    .metric-label { font-size: 8px; max-width: 66px; }
+    .story-quote { font-size: 8px; padding: 5px 9px; line-height: 1.35; }
+    .story-quote cite { font-size: 7.5px; }
+    .df-badge { font-size: 7.5px; padding: 2px 6px; }
 
-    .footer { padding: 7px 20px; }
-    .footer-avatar { height: 24px; }
-    .footer-name { font-size: 9.5px; }
-    .footer-title { font-size: 8px; }
-    .footer-contact { font-size: 8px; gap: 5px; }
-    .footer-cta-text { font-size: 8px; }
-    .footer-cta-link { font-size: 9px; padding: 3px 10px; }
+    .footer { padding: 8px 22px; }
+    .footer-avatar { height: 26px; }
+    .footer-name { font-size: 10px; }
+    .footer-title { font-size: 8.5px; }
+    .footer-contact { font-size: 8.5px; gap: 5px; }
+    .footer-cta-text { font-size: 8.5px; }
+    .footer-cta-link { font-size: 9.5px; padding: 4px 11px; }
 
     a { text-decoration: none; }
   }
@@ -485,7 +488,7 @@
 <!-- CHALLENGES STRIP -->
 <div class="challenges">
   <div class="challenges-label">Common Challenges</div>
-  <div class="challenge-items">
+  <div class="challenge-items" style="width:100%">
     <div class="challenge-item">
       <strong>Data trapped in silos</strong>
       <p>Customer profiles scattered across core banking, CRM, and lending systems with no unified view to act on.</p>
