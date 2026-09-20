@@ -36,8 +36,6 @@
   }
 
   .page {
-    max-width: 1100px;
-    margin: 0 auto;
     background: var(--white);
     box-shadow: 0 2px 20px rgba(0,0,0,0.08);
   }
@@ -192,8 +190,14 @@
 
   /* ── STORY GRID: 3 columns ── */
   .stories-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .story-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 14px;
   }
 
@@ -391,7 +395,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    .stories-grid { grid-template-columns: 1fr 1fr; }
+    .story-row { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 600px) {
@@ -403,7 +407,7 @@
     .challenge-item:first-child { border-top: none; padding-top: 0; }
     .df-banner { padding: 10px 20px; }
     .main { padding: 14px 20px 20px; }
-    .stories-grid { grid-template-columns: 1fr; }
+    .story-row { grid-template-columns: 1fr; }
     .footer { flex-direction: column; align-items: flex-start; padding: 16px 20px; }
     .footer-cta { align-items: flex-start; }
   }
@@ -433,6 +437,7 @@
     .main { padding: 10px 22px 10px; }
 
     .stories-grid { gap: 8px; }
+    .story-row { gap: 8px; }
 
     .story-card-body { padding: 9px 11px; }
     .story-logo { height: 28px; margin-bottom: 5px; }
@@ -505,9 +510,12 @@
   <span class="df-banner-text"><em>Dreamforce 2026 (Sept 15–17, San Francisco):</em> Featured sessions from bank customers sharing their data transformation stories, highlighting three below: Huntington, City National Bank of Florida, and Flagstar.</span>
 </div>
 
-<!-- MAIN: single unified grid, no section headers -->
+<!-- MAIN: 2-column, 3-row grid -->
 <div class="main">
   <div class="stories-grid">
+
+    <!-- ROW 1: Two Dreamforce DF cards -->
+    <div class="story-row">
 
     <!-- Huntington Bank - DF -->
     <div class="story-card df-card">
@@ -544,16 +552,25 @@
         <p class="story-challenge">City National Bank of Florida used Agent Fabric to streamline processes like credit memo creation while maintaining compliance, reducing costs, and building human oversight into AI workflows across the institution.</p>
         <div class="story-metrics">
           <div class="metric">
-            <span class="metric-value">96%</span>
-            <span class="metric-label">of firms struggle with AI governance</span>
+            <span class="metric-value">AI+</span>
+            <span class="metric-label">credit memo creation streamlined via Agent Fabric</span>
           </div>
           <div class="metric">
-            <span class="metric-value">1</span>
-            <span class="metric-label">unified AI control plane across all platforms</span>
+            <span class="metric-value">Human</span>
+            <span class="metric-label">oversight built into every AI workflow</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">Scale</span>
+            <span class="metric-label">governance &amp; cost control at enterprise AI rollout</span>
           </div>
         </div>
       </div>
     </div>
+
+    </div><!-- /story-row 1 -->
+
+    <!-- ROW 2: Flagstar DF + BankUnited -->
+    <div class="story-row">
 
     <!-- Flagstar Bank - DF -->
     <div class="story-card df-card">
@@ -577,6 +594,11 @@
         </div>
       </div>
     </div>
+
+    </div><!-- /story-row 2 -->
+
+    <!-- ROW 3: TAB Bank + Bank of Missouri -->
+    <div class="story-row">
 
     <!-- BankUnited -->
     <div class="story-card">
@@ -662,6 +684,8 @@
         </blockquote>
       </div>
     </div>
+
+    </div><!-- /story-row 3 -->
 
   </div>
 </div>
