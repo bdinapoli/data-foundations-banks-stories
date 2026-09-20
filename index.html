@@ -191,14 +191,15 @@
 
   .df-badge::before { content: "★"; font-size: 8px; }
 
-  /* ── STORY GRID: 3 columns ── */
+  /* ── STORY GRID: 2 columns ── */
   .stories-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 14px;
   }
 
   .story-row {
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
@@ -398,6 +399,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
+    .stories-grid { grid-template-columns: 1fr; }
     .story-row { grid-template-columns: 1fr; }
   }
 
@@ -410,6 +412,7 @@
     .challenge-item:first-child { border-top: none; padding-top: 0; }
     .df-banner { padding: 10px 20px; }
     .main { padding: 14px 20px 20px; }
+    .stories-grid { grid-template-columns: 1fr; }
     .story-row { grid-template-columns: 1fr; }
     .footer { flex-direction: column; align-items: flex-start; padding: 16px 20px; }
     .footer-cta { align-items: flex-start; }
@@ -421,48 +424,48 @@
 
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 
-    body { font-size: 9.5px; line-height: 1.38; }
+    body { font-size: 9px; line-height: 1.33; }
 
-    .header { padding: 13px 22px 11px; gap: 14px; }
-    .header-title { font-size: 16px; }
-    .header-sub { font-size: 9.5px; margin-top: 6px; line-height: 1.44; }
-    .qr-box { width: 64px; height: 64px; }
-    .qr-box svg, .qr-box img, .qr-box canvas { width: 56px !important; height: 56px !important; }
+    .header { padding: 11px 20px 9px; gap: 12px; }
+    .header-title { font-size: 15px; }
+    .header-sub { font-size: 9px; margin-top: 5px; line-height: 1.4; }
+    .qr-box { width: 62px; height: 62px; }
+    .qr-box svg, .qr-box img, .qr-box canvas { width: 54px !important; height: 54px !important; }
 
-    .challenges { padding: 8px 22px; }
-    .challenges-label { font-size: 8.5px; margin-bottom: 5px; }
-    .challenge-item strong { font-size: 9.5px; }
-    .challenge-item p { font-size: 8.5px; line-height: 1.35; }
+    .challenges { padding: 7px 20px; }
+    .challenges-label { font-size: 8px; margin-bottom: 4px; }
+    .challenge-item strong { font-size: 9px; }
+    .challenge-item p { font-size: 8px; line-height: 1.3; }
 
-    .df-banner { padding: 7px 22px; }
-    .df-banner-text { font-size: 9.5px; }
+    .df-banner { padding: 5px 20px; }
+    .df-banner-text { font-size: 9px; }
 
-    .main { padding: 10px 22px 10px; }
+    .main { padding: 9px 20px 9px; }
 
     /* Force 3-column grid when printing */
-    .stories-grid { gap: 9px; }
-    .story-row { display: grid !important; grid-template-columns: 1fr 1fr 1fr !important; gap: 9px; }
+    .stories-grid { display: grid !important; grid-template-columns: 1fr 1fr 1fr !important; gap: 8px; }
+    .story-row { display: contents !important; }
 
-    .story-card-body { padding: 9px 11px; }
-    .story-logo { height: 27px; margin-bottom: 5px; }
-    .story-logo img { max-height: 27px; max-width: 120px; }
-    .story-name { font-size: 10px; }
-    .story-detail { font-size: 8.5px; margin-bottom: 5px; }
-    .story-challenge { font-size: 8.5px; margin-bottom: 6px; line-height: 1.35; }
-    .story-metrics { gap: 6px; margin-bottom: 6px; }
-    .metric-value { font-size: 14px; }
-    .metric-label { font-size: 8px; max-width: 66px; }
-    .story-quote { font-size: 8px; padding: 5px 9px; line-height: 1.35; }
-    .story-quote cite { font-size: 7.5px; }
-    .df-badge { font-size: 7.5px; padding: 2px 6px; }
+    .story-card-body { padding: 8px 10px; }
+    .story-logo { height: 26px; margin-bottom: 4px; }
+    .story-logo img { max-height: 26px; max-width: 115px; }
+    .story-name { font-size: 9.5px; }
+    .story-detail { font-size: 8px; margin-bottom: 4px; }
+    .story-challenge { font-size: 8px; margin-bottom: 5px; line-height: 1.3; }
+    .story-metrics { gap: 5px; margin-bottom: 5px; }
+    .metric-value { font-size: 13px; }
+    .metric-label { font-size: 7.5px; max-width: 64px; }
+    .story-quote { font-size: 7.5px; padding: 4px 8px; line-height: 1.3; }
+    .story-quote cite { font-size: 7px; }
+    .df-badge { font-size: 7px; padding: 2px 5px; }
 
-    .footer { padding: 8px 22px; }
-    .footer-avatar { height: 26px; }
-    .footer-name { font-size: 10px; }
-    .footer-title { font-size: 8.5px; }
-    .footer-contact { font-size: 8.5px; gap: 5px; }
-    .footer-cta-text { font-size: 8.5px; }
-    .footer-cta-link { font-size: 9.5px; padding: 4px 11px; }
+    .footer { padding: 7px 20px; }
+    .footer-avatar { height: 24px; }
+    .footer-name { font-size: 9.5px; }
+    .footer-title { font-size: 8px; }
+    .footer-contact { font-size: 8px; gap: 5px; }
+    .footer-cta-text { font-size: 8px; }
+    .footer-cta-link { font-size: 9px; padding: 3px 10px; }
 
     a { text-decoration: none; }
   }
